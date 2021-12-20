@@ -6,6 +6,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class test {
     public static void main(String[] args) throws IOException {
@@ -22,7 +23,7 @@ public class test {
 
         // 读取文件
 
-        BufferedImage image = ImageIO.read(test.class.getResourceAsStream("/1.jpeg"));
+        BufferedImage image = ImageIO.read(test.class.getResourceAsStream("/2.png"));
         try {
             BufferedImage image1 = rotateImage(image,45);
             // 识别
@@ -32,9 +33,36 @@ public class test {
         } catch (TesseractException e) {
             System.err.println(e.getMessage());
         }
-
-
     }
+
+    public static String getInfo(InputStream is) throws IOException {
+        // 创建实例
+        ITesseract instance = new Tesseract();
+
+        // 设置识别语言
+
+        instance.setLanguage("chi_sim");
+
+        // 设置识别引擎
+
+        instance.setOcrEngineMode(ITessAPI.TessOcrEngineMode.OEM_TESSERACT_LSTM_COMBINED);
+
+        // 读取文件
+
+        BufferedImage image = ImageIO.read(is);
+        try {
+            //BufferedImage image1 = rotateImage(image,45);
+            // 识别
+
+            String result = instance.doOCR(image);
+            System.out.println(result);
+            return result;
+        } catch (TesseractException e) {
+            System.err.println(e.getMessage());
+            return null;
+        }
+    }
+
     public static BufferedImage rotateImage(final BufferedImage bufferedimage,
                                             final int degree) {
         int w = bufferedimage.getWidth();
