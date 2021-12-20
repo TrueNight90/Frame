@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://59.51.124.6:1199;DatabaseName=cardcust
+    username: sa
+    password: Gdmst888
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.sephiroth.entity
+
+
+#showSql
+logging:
+  level:
+    com:
+      sephiroth:
+        mapper : debug
