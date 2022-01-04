@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +18,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Api
-@RestController("test")
+@RestController
+@RequestMapping("test")
 public class TestController {
 
     public static Map map = new HashMap();
@@ -25,7 +27,7 @@ public class TestController {
 
     @ApiImplicitParam(name = "test",value = "测试",required = false)
     @ApiOperation(value = "测试接口")
-    @GetMapping("test")
+    @GetMapping("/")
     public String test(){
         return "test";
     }
