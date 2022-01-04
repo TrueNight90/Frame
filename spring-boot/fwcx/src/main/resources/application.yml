@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://59.51.124.6:1199;DatabaseName=cardcust
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=xxxx
     username: sa
-    password: Gdmst888
+    password: 000000
 
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
