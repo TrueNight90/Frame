@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class test {
+public class RotateImageTest {
     public static void main(String[] args) throws IOException {
         // 创建实例
         ITesseract instance = new Tesseract();
@@ -23,7 +23,7 @@ public class test {
 
         // 读取文件
 
-        BufferedImage image = ImageIO.read(test.class.getResourceAsStream("/2.png"));
+        BufferedImage image = ImageIO.read(RotateImageTest.class.getResourceAsStream("/2.png"));
         try {
             BufferedImage image1 = rotateImage(image,45);
             // 识别
