@@ -9,3 +9,4 @@ out
 gen
 *.class
 application-prod.yml
+*/*/target/*

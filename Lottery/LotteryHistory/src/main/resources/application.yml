@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://106.14.239.236:33306/opentest?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: sa
+    password: root
+
+logging:
+  level:
+    com:
+      sephiroth:
+        mapper: debug
