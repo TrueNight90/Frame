@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.CodeSignature;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 /**
@@ -35,7 +36,11 @@ public class ControllerAspect {
         Object proceed = point.proceed();
         String encode = Base64.encode(JSON.toJSONString(proceed));
         System.out.println(encode);
-        return encode;
+        //如果 返回值可以为字符串
+        if(proceed instanceof String){
+            return encode;
+        }
+        return proceed;
     }
 
     @Before("logPointCut()")
