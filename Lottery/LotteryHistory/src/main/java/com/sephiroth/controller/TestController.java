@@ -82,4 +82,10 @@ public class TestController {
         return verify;
     }
 
+    @ApiOperation(value = "获取sessionId")
+    @GetMapping("sessionId")
+    public Object sessionId(HttpServletRequest request){
+        return request.getSession().getId();
+    }
+
 }
