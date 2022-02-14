@@ -15,6 +15,7 @@
         <module>spring-boot-mirco-service-entity</module>
         <module>spring-boot-mirco-service-service</module>
         <module>spring-boot-mirco-service-server</module>
+        <module>spring-boot-mirco-service-api</module>
     </modules>
 
     <dependencies>

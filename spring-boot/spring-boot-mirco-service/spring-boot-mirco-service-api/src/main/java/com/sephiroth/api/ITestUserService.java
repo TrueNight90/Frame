@@ -1,7 +1,7 @@
-package com.sephiroth.mapper;
+package com.sephiroth.api;
 
 import com.sephiroth.po.User;
 
-public interface TestUserMapper {
+public interface ITestUserService {
     int insertUser(User user);
 }

@@ -1,7 +1,7 @@
-package com.sephiroth.service;
+package com.sephiroth.api;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.sephiroth.entity.User;
+import com.sephiroth.po.User;
 
 /**
  * <p>

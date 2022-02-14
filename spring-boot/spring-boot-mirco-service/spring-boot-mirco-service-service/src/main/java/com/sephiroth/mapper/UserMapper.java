@@ -1,7 +1,7 @@
 package com.sephiroth.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sephiroth.entity.User;
+import com.sephiroth.po.User;
 
 /**
  * <p>

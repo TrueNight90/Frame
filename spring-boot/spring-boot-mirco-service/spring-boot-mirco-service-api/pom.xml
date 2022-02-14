@@ -9,17 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-mirco-service-service</artifactId>
+    <artifactId>spring-boot-mirco-service-api</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.sephiroth</groupId>
             <artifactId>spring-boot-mirco-service-entity</artifactId>
-            <version>1.2.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.sephiroth</groupId>
-            <artifactId>spring-boot-mirco-service-api</artifactId>
             <version>1.2.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

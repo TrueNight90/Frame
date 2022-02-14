@@ -1,4 +1,4 @@
-package com.sephiroth.entity;
+package com.sephiroth.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

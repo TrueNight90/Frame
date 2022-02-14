@@ -24,3 +24,6 @@ dubbo:
     name: dubbo
   consumer:
     check: false
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*
