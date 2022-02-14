@@ -13,3 +13,15 @@ logging:
     com:
       sephiroth:
         mapper: debug
+
+server:
+  port: 8081
+
+dubbo:
+  application:
+    name: user-server
+  registry:
+    address: zookeeper://185.250.221.166:2181?init.timeout=60000
+  protocol:
+    port: 3010
+    name: dubbo

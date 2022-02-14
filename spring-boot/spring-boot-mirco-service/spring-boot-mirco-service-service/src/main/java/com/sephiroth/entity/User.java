@@ -2,11 +2,9 @@ package com.sephiroth.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
-
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -16,7 +14,6 @@ import io.swagger.annotations.ApiModelProperty;
  * @author sephiroth
  * @since 2022-01-17
  */
-@ApiModel(value = "User对象", description = "")
 @TableName("user")
 public class User implements Serializable {
 

@@ -5,10 +5,12 @@ import cn.hutool.captcha.LineCaptcha;
 import cn.hutool.captcha.generator.MathGenerator;
 import cn.hutool.jwt.JWT;
 import cn.hutool.jwt.JWTUtil;
+import com.sephiroth.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +26,9 @@ public class TestController {
 
     public static Map map = new HashMap();
     public static byte[] HS_256_KEY = "sephiroth".getBytes();
+
+    @Autowired
+    IUserService iUserService;
 
     @ApiImplicitParam(name = "test",value = "测试",required = false)
     @ApiOperation(value = "测试接口")
@@ -88,4 +93,10 @@ public class TestController {
         return request.getSession().getId();
     }
 
+
+    @ApiOperation(value = "获取用户")
+    @GetMapping("getUserList")
+    public Object getUserList(){
+        return  iUserService.list();
+    }
 }

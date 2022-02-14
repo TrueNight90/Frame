@@ -4,11 +4,13 @@ spring:
     url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=xxxx
     username: sa
     password: 000000
+  redis:
+    host: 106.14.239.236
+    port: 6379
 
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.sephiroth.entity
-
 
 #showSql
 logging:
@@ -16,3 +18,5 @@ logging:
     com:
       sephiroth:
         mapper : debug
+server:
+  port: 8081
