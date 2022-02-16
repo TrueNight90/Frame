@@ -16,6 +16,9 @@
         <module>spring-boot-mirco-service-service</module>
         <module>spring-boot-mirco-service-server</module>
         <module>spring-boot-mirco-service-api</module>
+        <module>spring-boot-mirco-service-rabbitmq-configuration</module>
+        <module>spring-boot-mirco-service-rabbitmq-provider</module>
+        <module>spring-boot-mirco-service-rabbitmq-consumer</module>
     </modules>
 
     <dependencies>

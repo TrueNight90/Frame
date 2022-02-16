@@ -15,7 +15,7 @@ logging:
         mapper: debug
 
 server:
-  port: 8081
+  port: 8079
 
 dubbo:
   application:

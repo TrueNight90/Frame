@@ -1,0 +1,24 @@
+server:
+  port: 8076
+spring:
+  rabbitmq:
+    port: 5672
+    host: 185.250.221.166
+    username: admin
+    password: admin
+  redis:
+    host: 185.250.221.166
+dubbo:
+  application:
+    name: rabbit-consumer
+  registry:
+    address: zookeeper://185.250.221.166:2181?init.timeout=60000
+  protocol:
+    port: 3076
+    name: dubbo
+  consumer:
+    check: false
+
+queueName: queue
+directExchangeName: directExchange
+routingKey: test
