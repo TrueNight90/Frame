@@ -19,6 +19,7 @@
         <module>spring-boot-mirco-service-rabbitmq-configuration</module>
         <module>spring-boot-mirco-service-rabbitmq-provider</module>
         <module>spring-boot-mirco-service-rabbitmq-consumer</module>
+        <module>spring-boot-mirco-service-rabbitmq-api</module>
     </modules>
 
     <dependencies>

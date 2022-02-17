@@ -25,3 +25,5 @@ dubbo:
   protocol:
     port: 3010
     name: dubbo
+  consumer:
+    check: false

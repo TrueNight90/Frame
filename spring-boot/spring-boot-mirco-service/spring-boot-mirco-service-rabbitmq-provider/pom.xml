@@ -17,5 +17,11 @@
             <artifactId>spring-boot-mirco-service-rabbitmq-configuration</artifactId>
             <version>1.2.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.sephiroth</groupId>
+            <artifactId>spring-boot-mirco-service-rabbitmq-api</artifactId>
+            <version>1.2.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>
