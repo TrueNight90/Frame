@@ -13,4 +13,6 @@ import com.sephiroth.po.User;
  */
 public interface IUserService extends IService<User> {
 
+    Object testSeata(String s) throws Exception;
+
 }

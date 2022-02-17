@@ -20,7 +20,10 @@ public class SendMessageServiceImpl implements ISendMessageService {
     private String routingKey;
 
     @Override
-    public void send(Object o){
+    public void send(Object o) throws Exception {
+        if(o instanceof Integer){
+            throw new Exception("类型错误");
+        }
         rabbitTemplate.convertAndSend(directExchangeName,routingKey,o);
     }
 }
