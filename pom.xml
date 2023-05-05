@@ -13,6 +13,7 @@
         <module>BQL-CRM</module>
         <module>Lottery</module>
         <module>SocketTestServer</module>
+        <module>spring-boot-rocketmq-demo-provider</module>
     </modules>
 
     <build>

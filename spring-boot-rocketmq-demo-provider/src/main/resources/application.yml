@@ -1,0 +1,8 @@
+rocketmq:
+  name-server: http://10.44.1.81:30913 #rocketmq服务地址
+
+  producer:
+    group: base_group_syncMsg
+    send-message-timeout: 5000
+    retry-times-when-send-failed: 2
+    max-message-size: 4194304
